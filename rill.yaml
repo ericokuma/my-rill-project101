@@ -1,0 +1,42 @@
+# Rill project configuration
+title: "My Rill Project 101"
+description: "A Rill project for data analytics and insights"
+
+# Project metadata
+version: "0.1.0"
+created: "2024-08-26"
+
+# Environment settings
+env:
+  # Default environment
+  default:
+    # Database connection (you can customize this based on your needs)
+    # Example for DuckDB (local file-based database)
+    database:
+      type: "duckdb"
+      path: "./data/analytics.db"
+    
+    # Optional: Add other environment-specific settings
+    # api_keys:
+    #   posthog: "${POSTHOG_API_KEY}"
+    #   openai: "${OPENAI_API_KEY}"
+
+# Project settings
+settings:
+  # Enable features
+  features:
+    ai_assistant: true
+    data_profiling: true
+    lineage: true
+  
+  # UI settings
+  ui:
+    theme: "light"
+    default_dashboard: "main"
+
+# Optional: Define data sources, models, metrics, and dashboards
+# These will be automatically discovered from their respective directories
+# sources/
+# models/
+# metrics/
+# dashboards/
